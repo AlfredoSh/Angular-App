@@ -1,0 +1,29 @@
+<!-- <p>list-todos works!</p> -->
+
+<h1>My Todo's</h1>
+
+<div class="container">
+
+<body>
+    <table class="table">
+        <caption>My Todo's</caption>
+
+        <thead>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Target Date</th>
+            <th>Is completed?</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor='let todo of todos'>
+                <td>{{todo.id}}</td>
+                <td>{{todo.Description}}</td>
+                <td>{{todo.targetDate | date}}</td>
+                <td>{{todo.done}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</div>
