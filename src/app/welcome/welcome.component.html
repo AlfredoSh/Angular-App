@@ -3,14 +3,18 @@
 
 <h1>Welcome!</h1>
 
-<div class='hero'>
-  <div class="hero-one"></div>
-  <div class="hero-two"></div>
-  <div class="header-title">
+<div class="container">
+
     <span class="header-primary">Hello {{name}}, My first Angular Application</span>
     <!-- <span class="header-sub">{{welcomeMessage }}</span> -->
 
     <span class="header-sub">List of Todos <a routerLink='/todos'>here</a></span>
 
-  </div>
+  <button class="btn btn-success" (click)="getWelcomeMessageWithPathVariable()">Get welcome Message</button>
+
+  <h2 *ngIf='welcomeMessageFromService'>Customized Welcome</h2>
+  {{welcomeMessageFromService}}
+
 </div>
+
+
