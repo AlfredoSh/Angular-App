@@ -9,7 +9,7 @@
         <caption>My Todo's</caption>
 
         <thead>
-            <th>Id</th>
+                <th>Id</th>
             <th>Description</th>
             <th>Target Date</th>
             <th>Is completed?</th>
@@ -18,9 +18,9 @@
         <tbody>
             <tr *ngFor='let todo of todos'>
                 <td>{{todo.id}}</td>
-                <td>{{todo.Description}}</td>
-                <td>{{todo.targetDate | date}}</td>
-                <td>{{todo.done}}</td>
+                <td>{{todo.description}}</td>
+                <td>{{todo.targetData | date}}</td>
+                <td>{{todo.dona}}</td>
             </tr>
         </tbody>
     </table>

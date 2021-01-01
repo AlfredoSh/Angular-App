@@ -10,7 +10,7 @@ import { HellowWorldBean, WelcomeDataService } from '../service/data/welcome-dat
 export class WelcomeComponent implements OnInit {
 
   welcomeMessage = "Bem-vindo"
-  welcomeMessageFromService: string
+  welcomeMessageFromService: string | undefined
   name = ''
 
   constructor(
@@ -50,7 +50,7 @@ export class WelcomeComponent implements OnInit {
   }
 
 
-  handleErrorResponse(error) {
+  handleErrorResponse(error: { error: { message: string; }; }) {
     console.log(error)
     console.log(error.error)
     console.log(error.error.message)

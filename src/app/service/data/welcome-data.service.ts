@@ -31,7 +31,7 @@ export class WelcomeDataService {
   
 
   
-  executeHelloWorldWithPathVariable(name) {
+  executeHelloWorldWithPathVariable(name: string) {
     //  console.log('works1')
       console.log(this.http.get('http://localhost:8080/hello-world-bean'))
   
