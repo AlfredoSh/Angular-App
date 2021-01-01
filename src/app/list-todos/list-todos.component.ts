@@ -5,9 +5,9 @@ import { TodoDataService } from '../service/data/todo-data.service';
 export class Todo {
   constructor(
     public id: number,
-    public Description: string,
-    public done: boolean,
-    public targetDate: Date
+    public description: string,
+    public dona: boolean,
+    public targetData: Date
   ) {
 
   }
