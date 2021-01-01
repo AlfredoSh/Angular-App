@@ -19,7 +19,14 @@ export class Todo {
   styleUrls: ['./list-todos.component.css']
 })
 export class ListTodosComponent implements OnInit {
-  todos: Todo[] 
+  todos: Todo[]
+  //  todos:Todo[]
+  // todos=[]
+  // todo = {
+  //     id : 1,
+  //     description: 'Learn to Dance'
+  // }
+  | undefined 
 //  todos:Todo[]
 
  // todos=[]
