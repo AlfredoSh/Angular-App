@@ -21,5 +21,10 @@ export class TodoDataService {
       //  return this.http.get('http://localhost:8080/hello-world-bean');
   
     }
+
+
+      deleteTodo(username: any, id: any){
+        return this.http.delete(`http://localhost:8080/users/${username}/todos/${id}`)
+      }
     
 }
