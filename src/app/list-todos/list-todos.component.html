@@ -6,7 +6,7 @@
 
 <div class="container">
 
-    <body>
+    <body>        
         <table class="table">
             <caption>My Todo's</caption>
 
@@ -15,6 +15,7 @@
                 <th>Description</th>
                 <th>Target Date</th>
                 <th>Is completed?</th>
+                <th>Update</th>
                 <th>Actions</th>
             </thead>
 
@@ -24,6 +25,7 @@
                     <td>{{todo.description}}</td>
                     <td>{{todo.targetData | date}}</td>
                     <td>{{todo.dona}}</td>
+                    <td><button id="prueba" class="btn btn-success" (click)="updateTodo(todo.id)">Update</button></td>
                     <td><button id="prueba" class="btn btn-warning" (click)="deleteTodo(todo.id)">Delete</button></td>
                 </tr>
             </tbody>
