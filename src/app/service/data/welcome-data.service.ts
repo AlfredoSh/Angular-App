@@ -32,7 +32,7 @@ export class WelcomeDataService {
   createBasicAuthenticationHttpHeader() {
     let username = 'user'
     let password = 'password'
-    let basicAuthHeaderString = 'Basic' + window.btoa(username + ':' + password)
+    let basicAuthHeaderString = 'Basic ' + window.btoa(username + ':' + password)
     return basicAuthHeaderString;
   }
 
@@ -48,9 +48,9 @@ export class WelcomeDataService {
       }
     )
     //  console.log('works1')
-    console.log(this.http.get('http://localhost:8080/hello-world-bean'))
+  //  console.log(this.http.get('http://localhost:8080/hello-world-bean'))
 
-    return this.http.get<HellowWorldBean>(`http://localhost:8080/hello-world-bean/variable/${name}`,
+    return this.http.get<HellowWorldBean>(      `http://localhost:8080/hello-world-bean/variable/${name}`,
     {headers});
     //  return this.http.get('http://localhost:8080/hello-world-bean');
 
