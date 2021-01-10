@@ -1,6 +1,6 @@
 import { HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { request } from 'http';
+//import { request } from 'http';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class HttpIntercepterBasicAuthService  implements HttpInterceptor{
       setHeaders: {
         Authorization: basicAuthHeaderString
       }
-    })
+    })  
     return next.handle(request);
    }
 
