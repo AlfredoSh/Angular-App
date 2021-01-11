@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'src/app/app.constants';
 import { Todo } from 'src/app/list-todos/list-todos.component';
 
 @Injectable({
@@ -16,8 +17,8 @@ export class TodoDataService {
 
   retrieveAllTodos(username: string) {
     //  console.log('works1')
-  
-      return this.http.get<Todo[]>(`http://localhost:8080/users/${username}/todos`);
+      console.log("this is api" + API_URL)
+      return this.http.get<Todo[]>(`${API_URL}/users/${username}/todos`);
       //  return this.http.get('http://localhost:8080/hello-world-bean');
   
     }
